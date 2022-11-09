@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  resources :restaurants do
-    resources :reviews, only: [:new]
+  resources :restaurants, except: [:destroy] do
+    resources :reviews, only: [:create]
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

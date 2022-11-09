@@ -8,6 +8,8 @@ class RestaurantsController < ApplicationController
 
   # GET /restaurants/1 or /restaurants/1.json
   def show
+    @restaurant = Restaurant.find(params[:id])
+    @review = Review.new
   end
 
   # GET /restaurants/new
@@ -47,15 +49,15 @@ class RestaurantsController < ApplicationController
     end
   end
 
-  # DELETE /restaurants/1 or /restaurants/1.json
-  def destroy
-    @restaurant.destroy
+  # # DELETE /restaurants/1 or /restaurants/1.json
+  # def destroy
+  #   @restaurant.destroy
 
-    respond_to do |format|
-      format.html { redirect_to restaurants_url, notice: "Restaurant was successfully destroyed." }
-      format.json { head :no_content }
-    end
-  end
+  #   respond_to do |format|
+  #     format.html { redirect_to restaurants_url, notice: "Restaurant was successfully destroyed." }
+  #     format.json { head :no_content }
+  #   end
+  # end
 
   private
 

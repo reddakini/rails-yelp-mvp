@@ -45,6 +45,9 @@ gem "bootsnap", require: false
 # Use Sass to process CSS
 # gem "sassc-rails"
 
+# faker to seed
+gem 'faker'
+
 # scaffold
 gem "jbuilder"
 
